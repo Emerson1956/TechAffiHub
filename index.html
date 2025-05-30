@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechAffiHub - Empowering Your Online Business Journey</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0; 
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a74da;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 60px;
+      color: white;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(10,116,218,0.7);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeInDown 1.5s ease forwards;
+      opacity: 0;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      animation: fadeInUp 1.5s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+    }
+    .hero-content .btn-primary {
+      background: #ffd700;
+      color: #0a74da;
+      padding: 15px 40px;
+      border: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+      transition: background 0.3s ease;
+      animation: fadeInUp 1.5s ease forwards;
+      animation-delay: 1s;
+      opacity: 0;
+    }
+    .hero-content .btn-primary:hover {
+      background: #e6c200;
+    }
+
+    @keyframes fadeInDown {
+      to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0; transform: translateY(-30px);}
+    }
+    @keyframes fadeInUp {
+      to {opacity: 1; transform: translateY(0);}
+      from {opacity: 0; transform: translateY(30px);}
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h3 {
+      text-align: center;
+      color: #0a74da;
+      font-weight: 700;
+      margin-bottom: 35px;
+      font-size: 2rem;
+    }
+
+    /* Latest Content Grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-body h4 {
+      margin: 0 0 15px 0;
+      font-weight: 700;
+      color: #0a74da;
+    }
+    .card-body p {
+      font-size: 1rem;
+      color: #444;
+    }
+    .card-body a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #0a74da;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .card-body a:hover {
+      border-color: #0a74da;
+    }
+
+    /* Services */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .service-item {
+      flex: 1 1 250px;
+      background: white;
+      padding: 25px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .service-item:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .service-item img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    .service-item h4 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #0a74da;
+    }
+    .service-item p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #e6f0ff;
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 3px 15px rgba(10,116,218,0.15);
+      margin-top: 40px;
+    }
+    .testimonial-item {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      font-style: italic;
+      color: #333;
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 50px;
+    }
+    .testimonial-item::before {
+      content: "“";
+      font-size: 3rem;
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      color: #0a74da;
+      font-weight: 700;
+    }
+    .testimonial-item strong {
+      display: block;
+      margin-top: 15px;
+      text-align: right;
+      color: #0a74da;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      max-width: 600px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    #contact h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a74da;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact input, #contact textarea {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: 'Poppins', sans-serif;
+    }
+    #contact button {
+      background: #0a74da;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover {
+      background: #095bb5;
+    }
+
+    /* Footer */
+    footer {
+      background: #0a74da;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TechAffiHub</h1>
+  <nav aria-label="Primary navigation">
+    <a href="#latest-content">Content</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Hero section">
+  <div class="hero-content">
+    <h2>Empowering Your Online Business Journey</h2>
+    <p>Discover insights, strategies, and tools to grow your affiliate marketing & digital business like a pro.</p>
+    <button class="btn-primary" onclick="document.getElementById('latest-content').scrollIntoView({behavior:'smooth'})">Explore Now</button>
+  </div>
+</section>
+
+<section id="latest-content" aria-label="Latest content">
+  <h3>Latest Content</h3>
+  <div class="content-grid">
+    <article class="card" tabindex="0" aria-label="Post: 5 Tips to Boost Affiliate Sales">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Affiliate marketing tips" />
+      <div class="card-body">
+        <h4>5 Tips to Boost Affiliate Sales</h4>
+        <p>Learn proven strategies to increase your affiliate commissions efficiently.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+    <article class="card" tabindex="0" aria-label="Post: How to Start a Digital Business">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Digital business startup" />
+      <div class="card-body">
+        <h4>How to Start a Digital Business</h4>
+        <p>A step-by-step guide to launching your online venture with confidence.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+    <article class="card" tabindex="0" aria-label="Post: Best Affiliate Tools in 2025">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Affiliate marketing tools" />
+      <div class="card-body">
+        <h4>Best Affiliate Tools in 2025</h4>
+        <p>Discover the must-have tools to streamline and maximize your affiliate marketing efforts.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="services" aria-label="Our Services">
+  <h3>Our Services</h3>
+  <div class="services">
+    <div class="service-item" tabindex="0" aria-label="Affiliate Marketing Consultation">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Consultation icon" />
+      <h4>Affiliate Marketing Consultation</h4>
+      <p>Get expert advice and tailored strategies to boost your affiliate sales and revenue.</p>
+    </div>
+    <div class="service-item" tabindex="0" aria-label="Digital Business Coaching">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Coaching icon" />
+      <h4>Digital Business Coaching</h4>
+      <p>Learn how to start, grow, and scale your online business with proven techniques.</p>
+    </div>
+    <div class="service-item" tabindex="0" aria-label="Content Creation">
+      <img src="https://cdn-icons-png.flaticon.com/512/2907/2907761.png" alt="Content creation icon" />
+      <h4>Content Creation</h4>
+      <p>Professional content development to engage your audience and enhance your brand presence.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" aria-label="Testimonials">
+  <h3>What Our Clients Say</h3>
+  <div class="testimonials">
+    <blockquote class="testimonial-item" tabindex="0">
+      TechAffiHub transformed my affiliate marketing approach. My commissions doubled within months!
+      <strong>- Sarah K.</strong>
+    </blockquote>
+    <blockquote class="testimonial-item" tabindex="0">
+      Their coaching helped me launch my first digital business successfully. Highly recommend.
+      <strong>- James L.</strong>
+    </blockquote>
+    <blockquote class="testimonial-item" tabindex="0">
+      The content creation service boosted my blog traffic and engagement tremendously.
+      <strong>- Maria D.</strong>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact form">
+  <h3>Get in Touch</h3>
+  <form>
+    <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" aria-label="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 TechAffiHub. All rights reserved.
+</footer>
+
+</body>
+</html>
