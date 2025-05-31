@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog - TechAffiHub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .blog-intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .blog-intro h2 {
+      font-size: 2.2rem;
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+    .blog-intro p {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .blog-post {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+    }
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+    .blog-post img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-post-content {
+      padding: 20px;
+    }
+    .blog-post h3 {
+      margin-top: 0;
+      color: #005fa3;
+      font-size: 1.4rem;
+    }
+    .blog-post p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+    .blog-post a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .blog-post a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TechAffiHub</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="blog.html" aria-current="page">Blog</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <section class="blog-intro">
+    <h2>Our Latest Insights</h2>
+    <p>Stay updated with the latest in affiliate marketing, digital trends, and online income strategies. Dive into our carefully crafted articles below.</p>
+  </section>
+
+  <section class="blog-grid">
+    <article class="blog-post">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Affiliate marketing tips" />
+      <div class="blog-post-content">
+        <h3>How to Start Affiliate Marketing with Zero Budget</h3>
+        <p>Learn how to launch a profitable affiliate business even if you're starting from scratch — no money, no audience required.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Digital strategy tools" />
+      <div class="blog-post-content">
+        <h3>Top 5 Free Tools Every Digital Marketer Should Use</h3>
+        <p>Discover free and powerful tools that can help you scale campaigns, automate workflows, and track performance like a pro.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+
+    <article class="blog-post">
+      <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Online income workspace" />
+      <div class="blog-post-content">
+        <h3>10 Proven Ways to Make Money Online in 2025</h3>
+        <p>From microtasks to affiliate programs, see which methods are delivering the best returns this year and how to get started fast.</p>
+        <a href="#">Read More</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 TechAffiHub. All rights reserved.
+</footer>
+
+</body>
+</html>
