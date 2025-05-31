@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TechAffiHub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-header h2 {
+      color: #0077cc;
+      font-size: 2.2rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #005fa3;
+    }
+    .contact-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .placeholder-info {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #777;
+    }
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TechAffiHub</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="blog.html">Blog</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" aria-current="page">Contact</a>
+</nav>
+
+<main>
+  <section class="contact-header">
+    <h2>Let's Connect</h2>
+    <p>We’d love to hear from you. Send us a message and we’ll respond as soon as we can!</p>
+  </section>
+
+  <div class="contact-grid">
+    <div class="contact-form">
+      <form>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-image">
+      <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=700&q=80" alt="Contact us illustration">
+    </div>
+  </div>
+
+  <p class="placeholder-info">Note: Contact information will be updated soon. You can still reach out using the form above.</p>
+</main>
+
+<footer>
+  &copy; 2025 TechAffiHub. All rights reserved.
+</footer>
+
+</body>
+</html>
